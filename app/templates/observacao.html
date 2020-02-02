@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>{{ title }} </title>
+		<style>
+			table, th, td {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+    <body>
+        <h1>Observações</h1>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>Data e Hora</th>
+				<th>Valor</th>
+				<th>Estação</th>
+				<th>Nível Alerta</th>
+				<th>Elemento</th>
+			</tr>
+			{% for thing in things %}
+            <tr>
+				<th>{{ thing.id }}</th>
+				<th>{{ thing.data }}</th>
+				<th>{{ thing.valor }}</th>
+				<th>{{ thing.Estacao_id }}</th>
+				<th>{{ thing.Alerta_id }}</th>
+				<th>{{ thing.Elemento_id }}</th>
+			</tr>
+			{% endfor %}
+		</table>
+    </body>
+</html>

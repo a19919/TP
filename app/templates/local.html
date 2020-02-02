@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>{{ title }} </title>
+		<style>
+			table, th, td {
+				border: 1px solid black;
+			}
+		</style>
+    </head>
+    <body>
+        <h1>Locais</h1>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>Nome</th>
+			</tr>
+			{% for thing in things %}
+            <tr>
+				<th>{{ thing.id }}</th>
+				<th>{{ thing.nome }}</th>
+			</tr>
+			{% endfor %}
+		</table>
+    </body>
+</html>

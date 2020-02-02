@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>{{ title }} </title>
+		<style>
+			table, th, td {
+				border: 1px solid black;
+			}
+		</style>
+    </head>
+    <body>
+        <h1>Alertas</h1>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>Tipo</th>
+				<th>Descrição</th>
+			</tr>
+			{% for thing in things %}
+			<tr>
+				<th>{{ thing.id }}</th>
+				<th>{{ thing.tipo }}</th>
+				<th>{{ thing.descricao }}</th>
+			</tr>
+			{% endfor %}
+		</table>
+    </body>
+</html>
